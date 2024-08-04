@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            letter-spacing: 4px;
+            background-color: white;
+            height: 50px;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .nav-right {
+            display: flex;
+            width: 600px;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+    
+
+        span {
+            font-weight: 700;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .nav-left:hover{
+            text-decoration: underline 5px rgb(46, 43, 48);
+            background-color:#123123;
+            line-height: 20px;
+            transition: 1s;
+
+
+        }
+        .r-p:hover,.r-c:hover,.r-a:hover{
+            text-decoration: underline 5px orangered;
+            background-color: #23232322;
+            padding: 10px;
+            transition: 1s;
+            
+        }
+        .m-img {
+            position: relative;
+            width: 100%;
+        }
+
+        .img-m {
+            position: absolute;
+            bottom: 230px;
+            left: 45%;
+            font-size: 40px;
+            color: white;
+            letter-spacing: 5px;
+            font-weight: 300;
+            text-shadow: 10px 20px 3px rgb(36, 33, 33);
+        }
+
+        .ns-img {
+            background-color: black;
+            padding: 10px;
+            opacity: 0.75;
+        }
+
+        .project {
+            margin-top: 40px;
+        }
+        .proj {
+            padding-bottom: 40px;
+            font-size: 25px;
+            padding-left: 25px;
+            letter-spacing: 3px;
+        }
+
+        hr {
+            width: 80%;
+            margin-bottom: 30px;
+        }
+
+        .image {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 50px;
+            margin-left: 30px;
+        }
+
+        .image img {
+
+            width: 320px;
+            height: 200px;
+        }
+
+        .img1 {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .s-hoil,
+        .brick,
+        .renovate,
+        .barn {
+            position: relative;
+        }
+
+        .summer {
+            font-size: 20px;
+            z-index: 4;
+            background-color: black;
+            opacity: 0.9;
+            color: white;
+            width: 140px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .brick-h,
+        .renovated,
+        .barn-h {
+            font-size: 20px;
+            background-color: black;
+            opacity: 0.9;
+            position: absolute;
+            top: 0;
+            color: white;
+            width: 140px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .about,
+        .detalis {
+            font-size: 25px;
+            letter-spacing: 3px;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            font-size: 20px;
+            line-height: 30px;
+            text-align: justify;
+            word-spacing: 10px;
+            text-indent: 50px;
+            margin-left: 80px;
+        }
+
+        .profiles {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            margin-left: 70px;
+            width: 300px;
+            height: 200px;
+            gap: 20px;
+        }
+
+        .profiles img {
+            width: 300px;
+            height: 200px;
+            border-radius: 15px;
+        }
+
+        .developer,
+        .pro2,
+        .pro3,
+        .pro4 {
+            box-shadow: 10px 20px 20px lightslategray;
+            border-radius: 15px;
+        }
+
+        .about-main {
+            margin-bottom: 50px;
+        }
+
+        button {
+            width: 300px;
+            border: none;
+            height: 50px;
+            font-size: 20px;
+            font-weight: 300;
+            border-radius: 10px;
+            box-shadow: 20px 10px 20px rgb(180, 178, 178);
+            
+        }
+
+        b {
+            line-height: 50px;
+            font-size: 23px;
+            font-weight: 300;
+            padding: 15px;
+        }
+
+        small {
+            margin: 30px 0px;
+            line-height: 50px;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 100;
+        }
+
+        .prode1 {
+            text-align: justify;
+            padding: 15px;
+            word-spacing: 2px;
+            font-size: 18px;
+        }
+
+        .content-down {
+            margin-top: 300px;
+            height: 600px;
+            margin-left: 50px;
+        }
+
+        .details {
+            font-size: 25px;
+            letter-spacing: 3px;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        .text {
+            font-size: 20px;
+            word-spacing: 3px;
+        }
+
+        input {
+            width: 90%;
+            height: 40px;
+            margin-top: 20px;
+            border: 1px solid;
+        }
+
+        ::placeholder {
+            font-size: 20px;
+            font-weight: 100;
+            padding-left: 20px;
+        }
+
+        input[type="submit"] {
+            width: 140px;
+            background-color: black;
+            color: white;
+            word-spacing: 3px;
+            border-radius: 10px;
+        }
+
+        input[type="submit"]:hover {
+            box-shadow: 20px 20px 10px red;
+        }
+
+        .map {
+            width: 90%;
+            margin-left: 50px;
+            height: 500px;
+        }
+        .footer{
+            margin-top: 20px;
+            background-color: black;
+            height: 50px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+      .project  img{
+        box-shadow: 10px 20px 10px rgb(48, 47, 47);
+        border-radius: 10px;
+      }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-left">
+            <p class="ns"><span class="ns">NS</span>Architects</p>
+        </div>
+        <div class="nav-right">
+            <nav class="r-p">Projects</nav>
+            <nav class="r-a">About</nav>
+            <nav class="r-c">Contact</nav>
+        </div>
+    </header>
+    <main>
+        <div class="main-img">
+            <img src="https://www.w3schools.com/w3images/architect.jpg" alt="" class="m-img">
+            <p class="img-m"><span class="ns-img">NS</span>Architects</p>
+        </div>
+        <div class="project">
+            <p class="proj">Projects</p>
+            <hr>
+            <div class="image">
+                <div class="s-hoil">
+                    <img src="https://www.w3schools.com/w3images/house5.jpg" alt="" class="img1">
+                    <p class="summer">Summer House</p>
+                </div>
+                <div class="brick">
+                    <img src="https://www.w3schools.com/w3images/house2.jpg" alt="" class="img2">
+                    <p class="brick-h">Brick House</p>
+                </div>
+                <div class="renovate">
+                    <img src="https://www.w3schools.com/w3images/house3.jpg" alt="" class="img3">
+                    <p class="renovated">Renovated</p>
+                </div>
+                <div class="barn">
+                    <img src="https://www.w3schools.com/w3images/house4.jpg" alt="" class="img4">
+                    <p class="barn-h">Barn House</p>
+                </div>
+                <div class="s-hoil">
+                    <img src="https://www.w3schools.com/w3images/house2.jpg" alt="" class="img1">
+                    <p class="summer">Summer House</p>
+                </div>
+                <div class="brick">
+                    <img src="https://www.w3schools.com/w3images/house5.jpg" alt="" class="img2">
+                    <p class="brick-h">Brick House</p>
+                </div>
+                <div class="renovate">
+                    <img src="https://www.w3schools.com/w3images/house3.jpg" alt="" class="img3">
+                    <p class="renovated">Renovated</p>
+                </div>
+                <div class="barn">
+                    <img src="https://www.w3schools.com/w3images/house2.jpg" alt="" class="img4">
+                    <p class="barn-h">Barn House</p>
+                </div>
+            </div>
+        </div>
+        <div class="about-main">
+            <p class="about">About</p>
+            <hr>
+            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nobis ut dignissimos nisi
+                facilis est neque. Ea aperiam eveniet voluptas amet deleniti. Dolorem reprehenderit voluptates
+                aliquid pariatur culpa. Nihil quod tempore ex adipisci eos. Sit, quod rerum tempore nam, odio fugit
+                corrupti dolor iste doloremque repellendus quasi. Adipisci, consequuntur labore quod assumenda
+                dolore porro veniam expedita ab maiores earum iure animi nostrum nam fuga tempore fugiat quae.</p>
+        </div>
+        <div class="profiles">
+            <div class="developer">
+                <img src="https://www.w3schools.com/w3images/team2.jpg" alt="" class="t1">
+                <b>Jhon Doe</b><br>
+                <small>CEO & Founder</small>
+                <p class="prode1">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur neque
+                </p>
+                <button>Contact</button>
+            </div>
+            <div class="pro2">
+                <img src="https://www.w3schools.com/w3images/team1.jpg" alt="" class="t2">
+                <b>Stepini MC Man</b><br>
+                <small>CEO & Founder</small>
+                <p class="prode1">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur neque
+                </p>
+                <button>Contact</button>
+            </div>
+            <div class="pro3">
+                <img src="https://www.w3schools.com/w3images/team3.jpg" alt="" class="t3">
+                <b>Roman Rocks</b><br>
+                <small>CEO & Founder</small>
+                <p class="prode1">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur neque
+                </p>
+                <button>Contact</button>
+            </div>
+            <div class="pro4">
+                <img src="https://www.w3schools.com/w3images/team4.jpg" alt="" class="t4">
+                <b>Dj Bravo</b><br>
+                <small>CEO & Founder</small>
+                <p class="prode1">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur neque
+                </p>
+                <button>Contact</button>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="content-down">
+            <p class="details">Contact</p>
+            <hr>
+            <p class="text">Lets get in touch and talk about your next project.</p>
+            <input type="text" placeholder="Name"><br>
+            <input type="text" placeholder="Email"><br>
+            <input type="text" placeholder="Subject"><br>
+            <input type="text" placeholder="Comment"><br>
+            <input type="submit" value="SEND MESSAGE">
+        </div>
+        <div class="map-main">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30443.89978323093!2d78.37001640263988!3d17.484228372124306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91b5be1f29c3%3A0xf5af71d23e422328!2sKukatpally%20Housing%20Board%20Colony%2C%20Kukatpally%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1722699891717!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+        </div>
+        <div class="footer">
+            Powered By Naveen 
+        </div>
+    </footer>
+</body>
+
+</html>
